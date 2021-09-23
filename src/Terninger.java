@@ -11,7 +11,7 @@ public class Terninger {
             int counter1 = 0;
             int counter2 = 0;
 
-            while(counter1 < 40 || counter2 < 40) {
+            while(counter1 < 40 & counter2 < 40) {
                 int result = rn.nextInt(high-low) + low;
                 int result2 = rn.nextInt(high-low) + low;
                 System.out.print("Spiller 1, slå terningen");
