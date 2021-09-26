@@ -11,7 +11,7 @@ public class Terninger {
         int result2 = rn.nextInt(high - low) + low;
         System.out.print(player + ", slå terningen");
         Scanner sc = new Scanner(System.in);
-        String r = sc.nextLine();
+        sc.nextLine();
         System.out.println("Du slog " + result + " og " + result2);
         return (result + result2);
     }
