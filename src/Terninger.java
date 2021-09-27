@@ -10,6 +10,7 @@ public class Terninger {
         String playerName1 = scan.nextLine();
         System.out.println("Navn på Spiller 2: ");
         String playerName2 = scan.nextLine();
+        System.out.println("\nTryk Enter for at slå med terningen\n");
 
         //Opretter en counter pr. spiller
         int counter1 = 0;

@@ -4,10 +4,8 @@ import java.util.Scanner;
 public class Roll {
     public static int roll(String player) {
         Random rn = new Random();
-        int low = 1;
-        int high = 6;
-        int result = rn.nextInt(high - low) + low;
-        int result2 = rn.nextInt(high - low) + low;
+        int result = rn.nextInt(6) + 1;
+        int result2 = rn.nextInt(6) + 1;
         System.out.print(player + ", slå terningen");
         Scanner sc = new Scanner(System.in);
         sc.nextLine();
