@@ -1,9 +1,9 @@
-import java.util.Random;
 import java.util.Scanner;
 
 public class Terninger {
 
     public static void main(String[] args) {
+
         //Opretter Scanner class
         Scanner scan = new Scanner(System.in);
         System.out.println("Navn på Spiller 1: ");
