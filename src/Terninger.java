@@ -21,9 +21,6 @@ public class Terninger {
             counter1 += Roll.roll(playerName1); //Counter1 stiger med sidste roll
             System.out.println("Du har " +counter1 + " point!\n");
 
-            //Hvis counter1 er over 40, skal loopen breakes inden den når spiller 2s tur
-            if(counter1>40)
-                break;
 
             counter2 += Roll.roll(playerName2);
             System.out.println("Du har " +counter2 + " point!\n");
