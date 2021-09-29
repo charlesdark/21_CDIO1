@@ -20,25 +20,39 @@ public class Terninger {
 
         //Laver et while loop som breaker når én af counterne når >40
         while (counter1 < 40 & counter2 < 40) {
-            int rn1 = rn.nextInt(6) + 1;
-            int rn2 = rn.nextInt(6) + 1;
-            int rn3 = rn.nextInt(6) + 1;
-            int rn4 = rn.nextInt(6) + 1;
+            // Opretter to terninger for spiller 1.
+            int rn1 = 0;
+            int rn2 = 0;
+            do {
+                rn1 = rn.nextInt(6) + 1;
+                rn2 = rn.nextInt(6) + 1;
+                // Her evaluerer den om der er slået to 1'ere og sætter counter1 = 0 hvis det er true
+                if(rn1 + rn2 == 2) {
+                    counter1 = 0;
+                }
+                else counter1 += Roll.roll(playerName1, rn1, rn2);//Counter1 stiger med sidste roll
+                System.out.println("Du har " +counter1 + " point!\n");
+                //Hvis counter1 er over 40, skal loopen breakes inden den når spiller 2s tur
+                if(counter1>40)
+                    break;
+                // Evaluerer om der er blevet slået to ens
+            } while (rn1 == rn2);
 
-            if(rn1 + rn2 == 2){
-                counter1 = 0;
-            }
-            else counter1 += Roll.roll(playerName1, rn1, rn2);//Counter1 stiger med sidste roll
-            System.out.println("Du har " +counter1 + " point!\n");
+            // Opretter to terninger for spiller 2.
+            int rn3 = 0;
+            int rn4 = 0;
+            do {
+                rn3 = rn.nextInt(6) + 1;
+                rn4 = rn.nextInt(6) + 1;
+                // Her evaluerer den om der er slået to 1'ere og sætter counter1 = 0 hvis det er true
+                if(rn3 + rn4 == 2){
+                    counter2 = 0;
+                }
+                else counter2 += Roll.roll(playerName2, rn3, rn4);
+                System.out.println("Du har " +counter2 + " point!\n");
+                // Evaluerer om der er blevet slået to ens
+            } while (rn3 == rn4);
 
-            //Hvis counter1 er over 40, skal loopen breakes inden den når spiller 2s tur
-            if(counter1>40)
-                break;
-            if(rn3 + rn4 == 2){
-                counter2 = 0;
-            }
-            else counter2 += Roll.roll(playerName2, rn3, rn4);
-            System.out.println("Du har " +counter2 + " point!\n");
         }
         if(counter1 > counter2) {
             System.out.println(playerName1 + " har vundet!!!");
