@@ -32,11 +32,13 @@ public class Terninger {
                 }
                 else counter1 += Roll.roll(playerName1, rn1, rn2);//Counter1 stiger med sidste roll
                 System.out.println("Du har " +counter1 + " point!\n");
-                //Hvis counter1 er over 40, skal loopen breakes inden den når spiller 2s tur
-                if(counter1>40)
-                    break;
+
                 // Evaluerer om der er blevet slået to ens
             } while (rn1 == rn2);
+
+            //Hvis counter1 er over 40, skal loopen breakes inden den når spiller 2s tur
+            if(counter1>40)
+                break;
 
             // Opretter to terninger for spiller 2.
             int rn3 = 0;
