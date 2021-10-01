@@ -50,7 +50,7 @@ public class Fisk {
             }
             while (Dice.getDots1() == Dice.getDots2());
         }
-        if (counter1 > 40){
+        if (counter1 > counter2){
             System.out.println(playerName1 + " vandt!!!");
         }
         else System.out.println(playerName2 + " vandt!!!");
