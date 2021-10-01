@@ -53,6 +53,9 @@ public class Fisk {
         if (counter1 > counter2){
             System.out.println(playerName1 + " vandt!!!");
         }
+        if (counter1 == counter2){
+            System.out.println("Uafgjort");
+        }
         else System.out.println(playerName2 + " vandt!!!");
     }
 }
