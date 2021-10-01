@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Fisk {
+public class Terningespil {
     public static void main(String[] args) {
         //Opretter Scanner class
         Scanner scan = new Scanner(System.in);
