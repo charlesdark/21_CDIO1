@@ -22,7 +22,7 @@ public class Test {
         for (int i = 2; i < 13; i++)
             System.out.println(i + "    " + Total[i] + "    " + 100.0 * (double) Total[i] / actual +" %");
 
-        System.out.println("Par: " + Total[13]);
+        System.out.println("Par: " + Total[13] + "    "+100.0 * (double) Total[13] / actual +" %" );
     }
 
 }
