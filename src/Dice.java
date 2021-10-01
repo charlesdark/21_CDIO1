@@ -2,7 +2,7 @@ import java.util.Random;
 
 class Dice{
 
-    static int dots,roll1,roll2,rollSet;
+    static int roll1,roll2,rollSet;
     Random rn = new Random();
 
     public void roll1(){
@@ -19,7 +19,7 @@ class Dice{
     public static int getDots2(){
         return roll2;
     }
-    public static int getSet(){
+    public static int getRollSet(){
         if (roll1 == roll2){
             rollSet++;
         }
