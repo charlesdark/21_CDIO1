@@ -21,8 +21,14 @@ public class Fisk {
                 dice.roll2();
                 System.out.println(playerName1 + " Tryk Enter for at slå med terningen");
                 scan.nextLine();
-                counter1 += Dice.getDots1() + Dice.getDots2();
+                if(Dice.getDots1() + Dice.getDots2() == 2) {
+                    counter1 = 0;}
+                else counter1 += Dice.getDots1() + Dice.getDots2();
                 System.out.println(playerName1 + ", du slog " + Dice.getDots1() + " og " + Dice.getDots2() + "\n Du har " + counter1 + " point!\n");
+
+                if(Dice.getDots1()==Dice.getDots2()){
+                    System.out.println(playerName1 + " har fået en ekstra tur");
+                }
             }
             while (Dice.getDots1() == Dice.getDots2());
 
@@ -32,8 +38,14 @@ public class Fisk {
                 dice.roll2();
                 System.out.println(playerName2 + " Tryk Enter for at slå med terningen");
                 scan.nextLine();
-                counter2 += Dice.getDots1() + Dice.getDots2();
+                if(Dice.getDots1() + Dice.getDots2() == 2) {
+                    counter2 = 0;}
+                else counter2 += Dice.getDots1() + Dice.getDots2();
                 System.out.println(playerName2 + ", du slog " + Dice.getDots1() + " og " + Dice.getDots2() + "\n Du har " + counter2 + " point!\n");
+
+                if(Dice.getDots1()==Dice.getDots2()) {
+                    System.out.println(playerName2 + " har fået en ekstra tur");
+                }
 
             }
             while (Dice.getDots1() == Dice.getDots2());
